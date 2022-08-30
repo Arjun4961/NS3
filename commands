@@ -1,0 +1,47 @@
+So open a terminal and issue the following commands
+Step 1:  Prerequisites
+
+$ sudo apt update
+
+
+In the following packages, all the required dependencies are taken care and you can install all these packages for the complete use of ns3.
+
+$ sudo apt install g++ python3 python3-dev pkg-config sqlite3 cmake python3-setuptools git qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools gir1.2-goocanvas-2.0 python3-gi python3-gi-cairo python3-pygraphviz gir1.2-gtk-3.0 ipython3 openmpi-bin openmpi-common openmpi-doc libopenmpi-dev autoconf cvs bzr unrar gsl-bin libgsl-dev libgslcblas0 wireshark tcpdump sqlite sqlite3 libsqlite3-dev  libxml2 libxml2-dev libc6-dev libc6-dev-i386 libclang-dev llvm-dev automake python3-pip libxml2 libxml2-dev libboost-all-dev 
+
+
+Step 2 : Download ns-allinone-3.36.1.tar.bz2 from the website nsnam.org. 
+
+https://www.nsnam.org/releases/ns-all... 
+
+Step 3 : Unzip the above file content to the home folder (in my case, its /home/pradeepkumar) - Check your home folder and do it accordingly. 
+ To unzip use the GUI with Right click and extract and select the /home/pradeepkumar/ folder.
+ 
+ else you can use the command 
+ 
+ $ tar jxvf ns-allinone-3.36.1.tar.bz2 
+ 
+Step 4: Go to the folder 
+$ cd ns-allinone-3.36.1/ 
+
+$ ./build.py --enable-examples --enable-tests
+This process takes some time depends on the Speed of your system.
+
+Once the installation is done. You can run the example as shown
+
+$ cd ns-3.36.1/
+
+$ ./ns3 run hello-simulator
+Hello Simulator 
+
+(You will get this output)
+
+To run the examples, we need to copy the examples/tutorial/first.cc to the scratch folder and execute the file as shown below 
+
+To run C++ (.cc) file, the following command is used.
+$ ./ns3 run scratch/first 
+
+To run the python file, here is the command
+
+$ ./ns3 run scratch/first.py
+
+Old system of using WAF is removed and ns3 is the new command....
